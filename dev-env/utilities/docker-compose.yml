@@ -1,0 +1,39 @@
+version: '2'
+services:
+  portainer:
+    container_name: utilities_portainer
+    image: portainer/portainer
+    ports:
+      - 9060:9000
+    command: --no-auth
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      #- .:/data
+  db:
+    container_name: utilities_db
+    image: mariadb:10 
+    volumes:
+      - utilities_volume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: kimai
+      MYSQL_USER: devenv
+      MYSQL_PASSWORD: devenv
+  kimai:
+    container_name: utilities_kimai
+    image: adivohayon/kimai:v0.3
+    ports:
+      - 1234:80
+    depends_on:
+      - "db"
+  phpmyadmin:
+    container_name: utilities_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 9050:80
+    depends_on:
+      - "db"
+volumes:
+  utilities_volume:

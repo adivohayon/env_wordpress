@@ -1,0 +1,27 @@
+{
+  "name": "new-project",
+  "version": "1.0.0",
+  "scripts": {
+
+    "dev:start": ". dev-env/dev.sh start",
+    "dev:stop": ". dev-env/dev.sh stop",
+    "dev:sync": ". dev-env/dev.sh sync-start",
+    "dev:sass-start": ". dev-env/dev.sh sass-start",
+    "dev:sass-stop": ". dev-env/dev.sh sass-stop",
+    "dev:setup-env": ". dev-env/dev.sh setup-env",
+  	
+    "app:start": "sh scripts/app.sh start",
+    "app:stop": "sh scripts/app.sh stop",
+
+    
+    "wordpress:fix-permissions": "sh dev-env/wordpress.sh fix-permissions",
+    "wordpress:backup" : "sh dev-env/wordpress.sh backup",
+    "wordpress:restore": "sh dev-env/wordpress.sh restore",
+    "wordpress:sass-start": "sh dev-env/wordpress.sh sass-start",
+    "wordpress:sass-stop": "sh dev-env/wordpress.sh sass-stop",
+    "wordpress:sass-compile": "sh dev-env/wordpress.sh sass-compile"
+  },
+  "main": "index.js",
+  "author": "Adiv Ohayon",
+  "license": "MIT"
+}

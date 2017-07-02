@@ -1,0 +1,47 @@
+.sass-cache
+.DS_Store
+
+#/data
+
+# compiled output
+/game/dist
+/game/tmp
+/game/out-tsc
+
+# dependencies
+/game/node_modules
+
+# IDEs and editors
+/game/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/game/.sass-cache
+/game/connect.lock
+/game/coverage
+/game/libpeerconnection.log
+npm-debug.log
+testem.log
+/game/typings
+
+# e2e
+/game/e2e/*.js
+/game/e2e/*.map
+style.css.map
+
+
+/logs/wordpress-sass.log
+/logs/wordpress-sass_pid.txt
+nohup.out
